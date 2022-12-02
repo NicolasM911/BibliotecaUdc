@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BIBLIOTECAUDC" Class="BIBLIOTECADataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-ESFERA\SQLEXPRESS;Initial Catalog=BIBLIOTECAUDC;Integrated Security=True" SettingsObjectName="BibliotecaUdc.Persistencia.Properties.Settings" SettingsPropertyName="BIBLIOTECAUDCConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.AUDITORIA" Member="AUDITORIA">
+    <Type Name="AUDITORIA">
+      <Column Name="AuditorId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AuditorNombre" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="AuditorApellido" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="HoraModificacion" Type="System.TimeSpan" DbType="Time NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AUTOR" Member="AUTOR">
+    <Type Name="AUTOR">
+      <Column Name="AutorId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Nacionalidad" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="AUTOR_LIBRO" Member="LIBRO" ThisKey="AutorId" OtherKey="AutorId" Type="LIBRO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CATEGORIA" Member="CATEGORIA">
+    <Type Name="CATEGORIA">
+      <Column Name="CategoriaId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="CATEGORIA_LIBRO" Member="LIBRO" ThisKey="CategoriaId" OtherKey="CategoriaId" Type="LIBRO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EDITORIAL" Member="EDITORIAL">
+    <Type Name="EDITORIAL">
+      <Column Name="EditorialId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="EDITORIAL_LIBRO" Member="LIBRO" ThisKey="EditorialId" OtherKey="EditorialId" Type="LIBRO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ESTUDIANTE" Member="ESTUDIANTE">
+    <Type Name="ESTUDIANTE">
+      <Column Name="EstudianteId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Apellido" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaNacimiento" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="GeneroId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TipoDocumentoId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NoDocumento" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Celular" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Direccion" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ProgramaId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="ESTUDIANTE_PRESTAMO" Member="PRESTAMO" ThisKey="EstudianteId" OtherKey="EstudianteId" Type="PRESTAMO" />
+      <Association Name="GENERO_ESTUDIANTE" Member="GENERO" ThisKey="GeneroId" OtherKey="GeneroId" Type="GENERO" IsForeignKey="true" />
+      <Association Name="PROGRAMA_ESTUDIANTE" Member="PROGRAMA" ThisKey="ProgramaId" OtherKey="ProgramaId" Type="PROGRAMA" IsForeignKey="true" />
+      <Association Name="TIPODOCUMENTO_ESTUDIANTE" Member="TIPODOCUMENTO" ThisKey="TipoDocumentoId" OtherKey="TipoDocumentoId" Type="TIPODOCUMENTO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GENERO" Member="GENERO">
+    <Type Name="GENERO">
+      <Column Name="GeneroId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="GENERO_ESTUDIANTE" Member="ESTUDIANTE" ThisKey="GeneroId" OtherKey="GeneroId" Type="ESTUDIANTE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LIBRO" Member="LIBRO">
+    <Type Name="LIBRO">
+      <Column Name="LibroId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="AutorId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EditorialId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NoPaginas" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AnoPublicacion" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CategoriaId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="LIBRO_PRESTAMO" Member="PRESTAMO" ThisKey="LibroId" OtherKey="LibroId" Type="PRESTAMO" />
+      <Association Name="AUTOR_LIBRO" Member="AUTOR" ThisKey="AutorId" OtherKey="AutorId" Type="AUTOR" IsForeignKey="true" />
+      <Association Name="CATEGORIA_LIBRO" Member="CATEGORIA" ThisKey="CategoriaId" OtherKey="CategoriaId" Type="CATEGORIA" IsForeignKey="true" />
+      <Association Name="EDITORIAL_LIBRO" Member="EDITORIAL" ThisKey="EditorialId" OtherKey="EditorialId" Type="EDITORIAL" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PRESTAMO" Member="PRESTAMO">
+    <Type Name="PRESTAMO">
+      <Column Name="PrestamoId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FechaEntrega" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="LibroId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EstudianteId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Observaciones" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="FechaDevolucion" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="ESTUDIANTE_PRESTAMO" Member="ESTUDIANTE" ThisKey="EstudianteId" OtherKey="EstudianteId" Type="ESTUDIANTE" IsForeignKey="true" />
+      <Association Name="LIBRO_PRESTAMO" Member="LIBRO" ThisKey="LibroId" OtherKey="LibroId" Type="LIBRO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PROGRAMA" Member="PROGRAMA">
+    <Type Name="PROGRAMA">
+      <Column Name="ProgramaId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="PROGRAMA_ESTUDIANTE" Member="ESTUDIANTE" ThisKey="ProgramaId" OtherKey="ProgramaId" Type="ESTUDIANTE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TIPODOCUMENTO" Member="TIPODOCUMENTO">
+    <Type Name="TIPODOCUMENTO">
+      <Column Name="TipoDocumentoId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="TIPODOCUMENTO_ESTUDIANTE" Member="ESTUDIANTE" ThisKey="TipoDocumentoId" OtherKey="TipoDocumentoId" Type="ESTUDIANTE" />
+    </Type>
+  </Table>
+</Database>

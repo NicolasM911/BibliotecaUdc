@@ -1,0 +1,7 @@
+C:\Users\USUARIO\source\repos\Proyectos\SupermercadoUdc\BibliotecaUDC\BiblicotecaUdc\BibliotecaUdc.Persistencia\bin\Debug\BibliotecaUdc.Persistencia.dll.config
+C:\Users\USUARIO\source\repos\Proyectos\SupermercadoUdc\BibliotecaUDC\BiblicotecaUdc\BibliotecaUdc.Persistencia\bin\Debug\BibliotecaUdc.Persistencia.dll
+C:\Users\USUARIO\source\repos\Proyectos\SupermercadoUdc\BibliotecaUDC\BiblicotecaUdc\BibliotecaUdc.Persistencia\bin\Debug\BibliotecaUdc.Persistencia.pdb
+C:\Users\USUARIO\source\repos\Proyectos\SupermercadoUdc\BibliotecaUDC\BiblicotecaUdc\BibliotecaUdc.Persistencia\obj\Debug\BibliotecaUdc.Persistencia.csproj.AssemblyReference.cache
+C:\Users\USUARIO\source\repos\Proyectos\SupermercadoUdc\BibliotecaUDC\BiblicotecaUdc\BibliotecaUdc.Persistencia\obj\Debug\BibliotecaUdc.Persistencia.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\source\repos\Proyectos\SupermercadoUdc\BibliotecaUDC\BiblicotecaUdc\BibliotecaUdc.Persistencia\obj\Debug\BibliotecaUdc.Persistencia.dll
+C:\Users\USUARIO\source\repos\Proyectos\SupermercadoUdc\BibliotecaUDC\BiblicotecaUdc\BibliotecaUdc.Persistencia\obj\Debug\BibliotecaUdc.Persistencia.pdb

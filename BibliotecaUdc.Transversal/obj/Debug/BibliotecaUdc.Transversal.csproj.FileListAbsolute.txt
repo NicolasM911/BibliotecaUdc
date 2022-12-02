@@ -1,0 +1,10 @@
+C:\Users\USUARIO\source\repos\Proyectos\SupermercadoUdc\BibliotecaUDC\BiblicotecaUdc\BibliotecaUdc.Transversal\bin\Debug\BibliotecaUdc.Transversal.dll
+C:\Users\USUARIO\source\repos\Proyectos\SupermercadoUdc\BibliotecaUDC\BiblicotecaUdc\BibliotecaUdc.Transversal\bin\Debug\BibliotecaUdc.Transversal.pdb
+C:\Users\USUARIO\source\repos\Proyectos\SupermercadoUdc\BibliotecaUDC\BiblicotecaUdc\BibliotecaUdc.Transversal\bin\Debug\BibliotecaUdc.Persistencia.dll
+C:\Users\USUARIO\source\repos\Proyectos\SupermercadoUdc\BibliotecaUDC\BiblicotecaUdc\BibliotecaUdc.Transversal\bin\Debug\BibliotecaUdc.Persistencia.pdb
+C:\Users\USUARIO\source\repos\Proyectos\SupermercadoUdc\BibliotecaUDC\BiblicotecaUdc\BibliotecaUdc.Transversal\bin\Debug\BibliotecaUdc.Persistencia.dll.config
+C:\Users\USUARIO\source\repos\Proyectos\SupermercadoUdc\BibliotecaUDC\BiblicotecaUdc\BibliotecaUdc.Transversal\obj\Debug\BibliotecaUdc.Transversal.csproj.AssemblyReference.cache
+C:\Users\USUARIO\source\repos\Proyectos\SupermercadoUdc\BibliotecaUDC\BiblicotecaUdc\BibliotecaUdc.Transversal\obj\Debug\BibliotecaUdc.Transversal.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\source\repos\Proyectos\SupermercadoUdc\BibliotecaUDC\BiblicotecaUdc\BibliotecaUdc.Transversal\obj\Debug\BibliotecaUdc.Transversal.csproj.CopyComplete
+C:\Users\USUARIO\source\repos\Proyectos\SupermercadoUdc\BibliotecaUDC\BiblicotecaUdc\BibliotecaUdc.Transversal\obj\Debug\BibliotecaUdc.Transversal.dll
+C:\Users\USUARIO\source\repos\Proyectos\SupermercadoUdc\BibliotecaUDC\BiblicotecaUdc\BibliotecaUdc.Transversal\obj\Debug\BibliotecaUdc.Transversal.pdb
